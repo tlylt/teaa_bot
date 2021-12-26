@@ -53,10 +53,10 @@ def main_handler(update, context):
         # reply
         add_typing(update, context)
         add_text_message(update, context, f"You said: {user_input}")
-    # c_id = get_chat_id(update, context)
-    # q = 'Question'
-    # answers = ['Rome', 'London', 'Amsterdam']
-    # context.bot.send_poll(chat_id=c_id, question=q, options=answers, type=Poll.QUIZ, correct_option_id=0)
+    c_id = get_chat_id(update, context)
+    q = 'Question'
+    answers = ['Rome', 'London', 'Amsterdam']
+    context.bot.send_poll(chat_id=c_id, question=q, options=answers, type=Poll.QUIZ, correct_option_id=0)
 
 
 
