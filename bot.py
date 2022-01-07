@@ -44,13 +44,13 @@ def get_chat_id(update, context):
 def help_command_handler(update, context):
     """Send a message when the command /help is issued."""
     update.message.reply_text(
-        "Type /list to list all quizzes\nType /quiz x to send a quiz"
+        "Type /list to list all quizzes\nType /quiz x to send a quiz\nType /submit to submit a question\nType /sample to see a sample quiz"
     )
 
 
 def sample_command_handler(update, context):
     update.message.reply_text("Sample Quiz Incoming!")
-    send_quiz(update, context, 1)
+    send_quiz(update, context, 5)
 
 
 @restricted
@@ -187,7 +187,7 @@ def mcq(update, context, chat_id, qn):
         options=options,
         type=Poll.QUIZ,
         correct_option_id=ans,
-        explanation=qn["explanation"],
+        explanation=qn.get("explanation"),
     )
 
 
@@ -208,11 +208,10 @@ def mrq(update, context, chat_id, qn):
     ans_text = "The correct answers are:\n||"
     ans_text += ", ".join(ans)
     ans_text += "||"
-
-    explanation_text = "The explanation:\n||" + qn["explanation"] + "||"
-
     add_text_message(update, context, ans_text)
-    add_text_message(update, context, explanation_text)
+    if qn.get("explanation"):
+        explanation_text = "The explanation:\n||" + qn["explanation"] + "||"
+        add_text_message(update, context, escape_dot(explanation_text))
 
 
 def send_quiz(update, context, qn_number):

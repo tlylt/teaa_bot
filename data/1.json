@@ -3,7 +3,6 @@
     "type": "MCQ",
     "explanation": "%f is the answer",
     "question": "What are valid format specifiers for the String.format() method?",
-    "code": "```java\nclass Main {\n  public static void main (String[] args) {\n    List list = new ArrayList();\n    list.add(\"hello\");\n    list.add(2);\n    System.out.print(list.get(0) instanceof Object);\n    System.out.print(list.get(1) instanceof Integer);\n  }\n}\n```",
     "correct_answers": ["%f"],
     "incorrect_answers": ["%w", "%z", "%q"]
   },
