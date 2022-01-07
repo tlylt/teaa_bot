@@ -1,8 +1,16 @@
+![logo](img/logo.png)
 ## Tea A Bot
 Team
 - Jun Xiong
 - Yongliang
 
+HACK AND ROLL!!!
+
+## Usage
+- Go to telegram and chat with @teaabot_bot
+- Also, you can add @teaabot_bot to your group
+## Demo
+![demo](img/demo.png)
 ## Flow
 1. The bot is deployed in the cloud and will be available after a command is issued to it.
 2. Users either chat with the bot or add the bot into a telegram group.
