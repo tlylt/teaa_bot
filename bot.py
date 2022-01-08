@@ -1,4 +1,4 @@
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Poll
+from telegram import Poll
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import telegram
 import time

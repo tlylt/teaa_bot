@@ -21,6 +21,6 @@
       "For factory methods"
     ],
     "incorrect_answers": ["For overriding methods", "For class level access"],
-    "explanation": "Yes, we do use `static` to declare a class level property or method. It’s a trick question:"
+    "explanation": "Yes, we do use `static` to declare a class level property or method. It’s a trick question Haha"
   }
 ]
