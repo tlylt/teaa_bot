@@ -1,0 +1,36 @@
+[
+  {
+    "type": "MRQ",
+    "explanation": "Return types and thrown exceptions are not considered to be a part of the method signature. All of the options are considered components of a method declaration.",
+    "question": "In Java, what does the method signature consist of? Choose all the applicable options.",
+    "correct_answers": [
+      "Method name",
+      "Parameter list (number, type and order of its parameters)"
+    ],
+    "incorrect_answers": [
+      "Access modifier",
+      "Return type",
+      "Exception",
+      "Method body"
+    ]
+  },
+  {
+    "type": "MRQ",
+    "explanation": "The only required elements of a method declaration are the method's return type, name, a pair of parentheses, (), and a body between braces, {}. Reference: https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html",
+    "question": "What are the only required elements of a method declaration ? Choose all the applicable options.",
+    "correct_answers": [
+      "Parameter",
+      "Return type",
+      "Method name",
+      "Method body"
+    ],
+    "incorrect_answers": ["Access modifier", "Exception"]
+  },
+  {
+    "type": "MRQ",
+    "explanation": "Valid ones are: %f, %d, %s , for floating point value, integer and strings.",
+    "question": "What are valid format specifiers for the String.format() method?",
+    "correct_answers": ["%f", "%d", "%s"],
+    "incorrect_answers": ["%w", "%z", "%q"]
+  }
+]

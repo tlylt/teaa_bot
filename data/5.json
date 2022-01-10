@@ -2,7 +2,7 @@
   {
     "type": "MCQ",
     "question": "What is the output of the above code?",
-    "code": "``` public static void main (String[] args) {\r\n    List list = new ArrayList();\r\n    list.add(\"hello\");\r\n    list.add(2);\r\n    System.out.print(list.get(0) instanceof Object);\r\n    System.out.print(list.get(1) instanceof Integer);\r\n  }\r\n}\r\n```",
+    "code": "public static void main (String[] args) {\r\n    List list = new ArrayList();\r\n    list.add(\"hello\");\r\n    list.add(2);\r\n    System.out.print(list.get(0) instanceof Object);\r\n    System.out.print(list.get(1) instanceof Integer);\r\n  }\r\n}\r\n",
     "correct_answers": ["`truetrue`"],
     "incorrect_answers": [
       "The code does not compile.",
@@ -10,7 +10,6 @@
       "`falsetrue`"
     ]
   },
-
   {
     "type": "MRQ",
     "question": "When do we use the “static” keyword in java? Select all that apply.",

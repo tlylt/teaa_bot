@@ -31,13 +31,15 @@ Currently, the bot supports two types of questions:
 - Multiple choice questions (MCQ)
 - Multiple response questions (MRQ) - can have multiple correct answers
 
-Both type of questions can have a code snippet that the bot will render as a syntax highlighted code snippet image.
+Both type of questions can have a code snippet that the bot will render as a syntax highlighted code snippet image (currently only supports Java).
 For MRQ, the correct answer and explanation will be sent as a message with spoiler tags. This is to allow students to check the answer after they attempted the quiz. Note that the spoiler tags are Telegram features that require the latest version of the Telegram client (December 2021 and beyond).
 
 Currently, the bot is intended for usage with the following modules:
 - CS2030/S
 ## Functions
 - `/help` - brings up a list of available commands and their descriptions
+- `/intro` - sends an introduction about the weekly quizzes
+  - restricted to people with admin access only
 - `/list` - lists all the quizzes
   - mainly for admins to check what quizzes and questions are available
 - `/quiz [quiz_name]` - sends the quiz with quiz name specified
@@ -46,7 +48,7 @@ Currently, the bot is intended for usage with the following modules:
   - interested TAs can chat with us to become admins!
 - `/sample` - sample question to see how the bot sends the quiz
   - since the quiz sending command is restricted to admins, this is a way to see how the bot works
-
+- `/about` - sends the author information
 - `/submit` - propose a question via Google form
 
 ## Flow
