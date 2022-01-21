@@ -1,0 +1,28 @@
+[
+  {
+    "type": "MCQ",
+    "explanation": "Interfaces can extend other interfaces hence option 2 is wrong. However, only classes and abstract classes can implement Interfaces.",
+    "question": "Which of the following statements about inheritance in Java is True?",
+    "correct_answers": [
+      "3 In `A implements B`, A must be a class or an abstract class."
+    ],
+    "incorrect_answers": [
+      "1 In `A extends B`, A must be a class or an abstract class.",
+      "2 In `A extends B`, B must be a class or an abstract class.",
+      "4 In `A implements B`, B must be a class or an abstract class.",
+      "None of the options."
+    ]
+  },
+  {
+    "type": "MCQ",
+    "explanation": "Option 1. c1 and c2 are both pointing to the same address value hence, true.",
+    "question": "Suppose we have a Circle c object that has been initialized elsewhere, we assign c to two Circle objects as below: \nCircle c1 = c;\nCircle c2 = c;\nSelect the correct statement about the code snippet above.",
+    "correct_answers": ["1 c1 == c2 always evaluates to true;"],
+    "incorrect_answers": [
+      "2 c1 == c2 always evaluates to false;",
+      "3 c1.equals(c2) always evaluates false",
+      "4 c1.equals(c2) may evaluate true for false",
+      "None of the options."
+    ]
+  }
+]
