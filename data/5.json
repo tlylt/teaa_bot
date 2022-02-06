@@ -7,7 +7,8 @@
     "incorrect_answers": [
       "The code does not compile.",
       "`truefalse`",
-      "`falsetrue`"
+      "`falsetrue`",
+      "None of the rest."
     ]
   },
   {
@@ -19,7 +20,24 @@
       "For the main method",
       "For factory methods"
     ],
-    "incorrect_answers": ["For overriding methods", "For class level access"],
-    "explanation": "Yes, we do use `static` to declare a class level property or method. It’s a trick question Haha"
+    "incorrect_answers": [
+      "For overriding methods",
+      "For limiting fields to class level access only"
+    ],
+    "explanation": "Private (not static) is used such that a field is not accessible from non-child class of the same package. (Yes, we do use `static` to declare a class-level property or method. It’s a trick question:)"
+  },
+  {
+    "type": "MCQ",
+    "explanation": "Packages are used to group classes and interfaces together.",
+    "question": "What is a package in java?",
+    "correct_answers": [
+      "Collection of related classes and interfaces which are bundled together."
+    ],
+    "incorrect_answers": [
+      "Collection of related classes which are bundled together.",
+      "Collection of related interfaces which are bundled together.",
+      "Collection of related objects and classes which are bundled together.",
+      "None of the rest"
+    ]
   }
 ]
