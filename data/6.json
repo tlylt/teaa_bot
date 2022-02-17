@@ -1,0 +1,28 @@
+[
+  {
+    "type": "MCQ",
+    "question": "What is the output of the above code?",
+    "code": "class Main {\r\n    public static void main(String[] args) {\r\n        System.out.println(print(1));\r\n    }\r\n\r\n    static Exception print(int i) {\r\n        if (i > 0) {\r\n            return new Exception();\r\n        } else {\r\n            throw new RuntimeException();\r\n        }\r\n    }\r\n}",
+    "correct_answers": ["`java.lang.Exception`"],
+    "incorrect_answers": [
+      "A RuntimeException is thrown",
+      "A Exception is thrown",
+      "`java.lang.RuntimeException`",
+      "This code will not compile"
+    ]
+  },
+  {
+    "type": "MRQ",
+    "question": "Choose all the problematic ways of handling exceptions above. (Problematic meaning unable to compile OR unnecessary) Choose 1, 2, 3, 4",
+    "correct_answers": [
+      "`void willThrow1() {\r\n    \/\/ does some stuff\r\n    throw new NullPointerException(\"1n\");\r\n  }\r\n`",
+      "`void willThrow2() throws NullPointerException {\r\n    throw new NullPointerException(\"2\");\r\n  }\r\n`",
+      "`void willThrow4() {\r\n    throw new IOException();\r\n}\r\n`",
+    ],
+    "incorrect_answers": [
+      "`void willThrow3() throws IOException {\r\n    \/\/ does some stuff\r\n    throw new IOException();\r\n  }\r\n`",
+      "For limiting fields to class level access only"
+    ],
+    "explanation": "The next question might be: \"If it's so good to document a method's API, including the exceptions it can throw, why not specify runtime exceptions too?\" Runtime exceptions represent problems that are the result of a programming problem, and as such, the API client code cannot reasonably be expected to recover from them or to handle them in any way. Such problems include arithmetic exceptions, such as dividing by zero; pointer exceptions, such as trying to access an object through a null reference; and indexing exceptions, such as attempting to access an array element through an index that is too large or too small.\r\nRuntime exceptions can occur anywhere in a program, and in a typical one they can be very numerous. Having to add runtime exceptions in every method declaration would reduce a program's clarity. Thus, the compiler does not require that you catch or specify runtime exceptions (although you can).\r\nhttps:\/\/docs.oracle.com\/javase\/tutorial\/essential\/exceptions\/runtime.html\r\n"
+  }
+]
