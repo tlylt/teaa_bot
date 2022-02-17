@@ -9,20 +9,15 @@
       "A Exception is thrown",
       "`java.lang.RuntimeException`",
       "This code will not compile"
-    ]
+    ],
+    "explanation": "There is a difference between throw and return."
   },
   {
     "type": "MRQ",
-    "question": "Choose all the problematic ways of handling exceptions above. (Problematic meaning unable to compile OR unnecessary) Choose 1, 2, 3, 4",
-    "correct_answers": [
-      "`void willThrow1() {\r\n    \/\/ does some stuff\r\n    throw new NullPointerException(\"1n\");\r\n  }\r\n`",
-      "`void willThrow2() throws NullPointerException {\r\n    throw new NullPointerException(\"2\");\r\n  }\r\n`",
-      "`void willThrow4() {\r\n    throw new IOException();\r\n}\r\n`",
-    ],
-    "incorrect_answers": [
-      "`void willThrow3() throws IOException {\r\n    \/\/ does some stuff\r\n    throw new IOException();\r\n  }\r\n`",
-      "For limiting fields to class level access only"
-    ],
-    "explanation": "The next question might be: \"If it's so good to document a method's API, including the exceptions it can throw, why not specify runtime exceptions too?\" Runtime exceptions represent problems that are the result of a programming problem, and as such, the API client code cannot reasonably be expected to recover from them or to handle them in any way. Such problems include arithmetic exceptions, such as dividing by zero; pointer exceptions, such as trying to access an object through a null reference; and indexing exceptions, such as attempting to access an array element through an index that is too large or too small.\r\nRuntime exceptions can occur anywhere in a program, and in a typical one they can be very numerous. Having to add runtime exceptions in every method declaration would reduce a program's clarity. Thus, the compiler does not require that you catch or specify runtime exceptions (although you can).\r\nhttps:\/\/docs.oracle.com\/javase\/tutorial\/essential\/exceptions\/runtime.html\r\n"
+    "question": "Choose all the problematic ways of handling exceptions above. (Problematic meaning unable to compile OR unnecessary)",
+    "code": "void willThrow1() {\r\n    // does some stuff\r\n    throw new NullPointerException(\"1n\");\r\n  }\r\n  void willThrow2() throws NullPointerException {\r\n    throw new NullPointerException(\"2\");\r\n  }\r\n  void willThrow3() throws IOException {\r\n    // does some stuff\r\n    throw new IOException();\r\n  }\r\nvoid willThrow4() {\r\n    throw new IOException();\r\n}\r\n",
+    "correct_answers": ["`void willThrow2()`", "`void willThrow4()`"],
+    "incorrect_answers": ["`void willThrow1()`", "`void willThrow3()`"],
+    "explanation": "How to handle checked vs unchecked exceptions? Type out the code in jshell and experiment with it. If not sure please ask."
   }
 ]
