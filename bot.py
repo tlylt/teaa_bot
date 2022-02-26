@@ -56,7 +56,6 @@ def main():
     dp.add_handler(CommandHandler("about", about_command_handler))
     dp.add_handler(CommandHandler("code", code_command_handler))
     dp.add_handler(CommandHandler("yolo", yolo_command_handler))
-
     # message handler
     dp.add_handler(MessageHandler(Filters.text, main_handler))
 

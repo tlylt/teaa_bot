@@ -6,6 +6,7 @@ from telegram import ChatAction, ParseMode
 from pygments import highlight
 from pygments.lexers.jvm import JavaLexer
 from pygments.formatters import ImageFormatter
+from pygments.lexers import get_lexer_by_name
 
 STARTER_MESSAGE = "Hi all, to bolster learning, we will be sharing 3-4 MCQs that we adapted from Past Year Papers/lecture notes etc to test your knowledge of the module content so far. They should take no more than 5 mins to complete and are totally optional. We will post about once a week and attempts are anonymous. Feel free to try them and check your understanding:)"
 
@@ -89,6 +90,8 @@ def check_confimation(update, context):
         add_text_message(update, context, "Exitting...")
         return False
 
+def get_lexer(code):
+    return get_lexer_by_name("java")
 
 def code_to_img(code):
-    return highlight(code, JavaLexer(), ImageFormatter())
+    return highlight(code, get_lexer(code), ImageFormatter(style="perldoc"))
