@@ -8,13 +8,11 @@
       "Encapsulation",
       "Inheritance",
       "Polymorphism"
-    ],
-    "explanation": "There is a difference between throw and return."
+    ]
   },
   {
     "type": "MCQ",
     "question": "Which of the following statements about good OO programming practice is LEAST appropriate? (AMAP = as much as possible)",
-    "code": "void willThrow1() {\r\n    // does some stuff\r\n    throw new NullPointerException(\"1n\");\r\n  }\r\n  void willThrow2() throws NullPointerException {\r\n    throw new NullPointerException(\"2\");\r\n  }\r\n  void willThrow3() throws IOException {\r\n    // does some stuff\r\n    throw new IOException();\r\n  }\r\nvoid willThrow4() {\r\n    throw new IOException();\r\n}\r\n",
     "correct_answers": [
       "We should use Inheritance to reduce duplication of code between two classes as much as possible"
     ],

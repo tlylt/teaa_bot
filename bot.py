@@ -12,7 +12,7 @@ from command_handlers import (
     yolo_command_handler,
     about_command_handler,
 )
-from utils import add_text_message, add_typing, escape_reserved, get_chat_id
+from utils import add_text_message, add_typing, code_to_img, escape_reserved, get_chat_id
 
 
 load_dotenv(find_dotenv())
@@ -38,6 +38,9 @@ def echo(update, context):
 def main_handler(update, context):
     if update.message is not None:
         user_input = update.message.text
+        context.bot.send_photo(
+            chat_id=get_chat_id(update, context), photo=code_to_img(user_input)
+        )
         if user_input == "yolo":
             add_typing(update, context)
             add_text_message(update, context, "YOLO")
