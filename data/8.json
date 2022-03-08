@@ -1,0 +1,26 @@
+[
+	{
+		"type": "MRQ",
+		"question": "The code above will have a compile-error. Locate the lines of errors.",
+		"code": "class Gen<T> {\r\n  private Object[] elems;\r\n  private int idx;\r\n  public Gen(int size) {\r\n    elems = new Object[100];\r\n  }\r\n  public void add(T elems) {\r\n    elems[idx] = elems;\r\n    idx = idx + 1;\r\n  }\r\n  public void add(Object obj) {\r\n    elems[idx] = obj;\r\n  }\r\n}",
+		"correct_answers": ["Line 8", "Line 7 & Line 11"],
+		"incorrect_answers": ["Line 2", "Line 4", "Line 5", "Line 12"],
+		"explanation": "- elems[idx] = elems in add method will cause error because elems is not an array. Correction: use this.elems[idx] = elems instead. \n- Add method will have the same signature after type erasure. Correction: rename one of the methods"
+	},
+	{
+		"type": "MCQ",
+		"question": "Consider the following code fragment. \r\nA a = new A(2); \r\nB b1 = new B(2, a); \r\nB b2 = b1.copy(); \r\nb2.setX(3); \r\nSystem.out.println(b1.getX()); \r\nWhat is the output of the code?\r\n",
+		"code": "class A {\r\n  private int x;\r\n  public A(int x) {\r\n    this.x = x;\r\n  }\r\n  public A copy() {\r\n    return new A(x);\r\n  }\r\n  public void setX(int x) {\r\n    this.x = x;\r\n  }\r\n  public int getX() {\r\n    return x;\r\n  }\r\n}\r\n\r\nclass B {\r\n  private int x;\r\n  private A a;\r\n  public B(int x, A a) {\r\n    this.x = x;\r\n    this.a = a;\r\n  }\r\n  public B copy() {\r\n    return new B(x, a);\r\n  }\r\n  public void setX(int x) {\r\n    this.x = x;\r\n    this.a.setX(x);\r\n  }\r\n  public int getX() {\r\n    return this.x + this.a.getX();\r\n  }\r\n}",
+		"correct_answers": ["5"],
+		"incorrect_answers": ["2", "3", "4", "6"],
+		"explanation": "Trace the code slowly and follow the value of x"
+	},
+	{
+		"type": "MCQ",
+		"question": "What is the output of this code?",
+		"code": "class Main {\r\n  public static void main(String[] args) {\r\n    List<Object> list = new ArrayList<>();\r\n    list.add(true);\r\n    list.add(Integer.parseInt(\"165\"));\r\n    list.add(Boolean.TRUE);\r\n    System.out.println(list.size());\r\n    System.out.println(list.get(1) instanceof Integer);\r\n  }\r\n}",
+		"correct_answers": ["3true"],
+		"incorrect_answers": ["2true", "3false", "2false", "The code does not compile"],
+		"explanation": "size returns a int and instanceOf returns a true boolean value as the 2 item in the list is an integer"
+	}
+]
