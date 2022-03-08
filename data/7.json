@@ -8,21 +8,21 @@
       "Encapsulation",
       "Inheritance",
       "Polymorphism"
-    ],
-    "explanation": "There is a difference between throw and return."
+    ]
   },
   {
     "type": "MCQ",
     "question": "Which of the following statements about good OO programming practice is LEAST appropriate? (AMAP = as much as possible)",
-    "code": "void willThrow1() {\r\n    // does some stuff\r\n    throw new NullPointerException(\"1n\");\r\n  }\r\n  void willThrow2() throws NullPointerException {\r\n    throw new NullPointerException(\"2\");\r\n  }\r\n  void willThrow3() throws IOException {\r\n    // does some stuff\r\n    throw new IOException();\r\n  }\r\nvoid willThrow4() {\r\n    throw new IOException();\r\n}\r\n",
-    "correct_answers": ["We should use Inheritance to reduce duplication of code between two classes as much as possible"],
+    "correct_answers": [
+      "We should use Inheritance to reduce duplication of code between two classes as much as possible"
+    ],
     "incorrect_answers": [
-      "We should declare fields as private as much as possible", 
-      "We should not throw exceptions that reveal internal implementation of a class as much as possible", 
+      "We should declare fields as private as much as possible",
+      "We should not throw exceptions that reveal internal implementation of a class as much as possible",
       "We should avoid using accessors and mutators (getters and setters) to private fields AMAP",
       "We should use polymorphism so that each class is responsible for handling its own behavior AMAP",
       "None of the answers above are correct"
     ],
-    "explanation": "Inheritance is not always the right solution to reduce code duplicates. We should follow LSP, and use composition when appropriate. As for the more appropriate ways, The act of declaring fields as private is to enforce proper encapsulation of your objects and classes. Throwing exceptions is important to manage error situations or unexpected events that may arise during a program execution. If we declare the thing private, why make a getter and setter for it? Finally for polymorphism, we want each object to be able to take on many forms."
+    "explanation": "Inheritance is not always the right solution to reduce code duplicates. We should follow LSP, and use composition when appropriate."
   }
 ]
