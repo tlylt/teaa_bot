@@ -1,0 +1,28 @@
+[
+  {
+    "type": "MCQ",
+    "question": "How do you write a foreach loop that will iterate over `ArrayList<Boat> shipYard`",
+    "correct_answers": ["`for (Boat b : shipYard) {}`"],
+    "incorrect_answers": [
+      "`for (Boat b: shipYard<Boat>) {}`",
+      "`for (Boat in shipYard) {}`",
+      "`for (shipYard.next()) {}`"
+    ]
+  },
+  {
+    "type": "MCQ",
+    "question": "I want to sort an ArrayList of names alphabetically, which approach would NOT work?",
+    "correct_answers": ["names.Sort(List<String>)"],
+    "incorrect_answers": [
+      "names.sort(Comparator.comparing(String::toString))",
+      "Collections.sort(names)",
+      "names.stream().sorted((s1,s2) -> s1.compareTo(s2)).collect(Collectors.toList())"
+    ]
+  },
+  {
+    "type": "MCQ",
+    "question": "What is the output of: `IntStream.range(2,5).forEach(x -> System.out.print(x*2));`",
+    "correct_answers": ["468"],
+    "incorrect_answers": ["234", "This code is invalid", "123"]
+  }
+]
