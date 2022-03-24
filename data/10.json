@@ -1,0 +1,14 @@
+[
+  {
+    "type": "MCQ",
+    "code": "interface A {} \r\ninterface B {} \r\ninterface C extends A {} \r\ninterface D extends A,B {} \r\ninterface E extends C,D {} \r\nclass F implements B {} \r\nclass G extends F implements E {} \r\nclass H extends G {} \r\n",
+    "question": "Consider the interfaces and classes shown.Further consider the following calls to Pair<T,U> (a utility class to keep two objects). If we declared a variable Pair<? super G, ? extends B> pair. Which of the following instantiation will NOT cause compile-error?",
+    "correct_answers": ["`pair = new Pair<F,D>(new F(), new G());`"],
+    "incorrect_answers": [
+      "`pair = new Pair<H,D>(new F(), new G());`",
+      "`pair = new Pair<G,D>(new G(), new E());`",
+      "There are more than one correct answer listed.",
+      "None of the rest."
+    ]
+  }
+]
