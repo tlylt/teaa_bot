@@ -1,0 +1,23 @@
+[
+  {
+    "type": "MCQ",
+    "question": "A class-level member can be accessed using an instance (e.g., p.getTotal() where p is a Person object).",
+    "correct_answers": ["True"],
+    "incorrect_answers": ["False"],
+    "explanation": "static methods and attributes can indeed be assessed from an instance object, though not recommended"
+  },
+  {
+    "type": "MCQ",
+    "question": "The statement System.out.println(...) involves a class-level member and an instance level member.",
+    "correct_answers": ["True"],
+    "incorrect_answers": ["False"],
+    "explanation": "out is a static attribute of the System class, println is an instance method of PrintStream"
+  },
+  {
+    "type": "MCQ",
+    "question": "In Java, method overriding can happen within the same class or among classes in an inheritance hierarchy.",
+    "correct_answers": ["False"],
+    "incorrect_answers": ["True"],
+    "explanation": "It’s overloading that can happen within the same class."
+  }
+]
