@@ -1,0 +1,20 @@
+[
+  {
+    "type": "MCQ",
+    "question": "A class implementing an interface results in an is-a relationship, just like in class inheritance.",
+    "correct_answers": ["True"],
+    "incorrect_answers": ["False"]
+  },
+  {
+    "type": "MCQ",
+    "question": "Java exceptions are divided into checked exceptions, unchecked exceptions, and runtime exceptions.",
+    "correct_answers": ["True"],
+    "incorrect_answers": ["False"]
+  },
+  {
+    "type": "MCQ",
+    "question": "Which functional interfaces does Java provide to serve as data types for lambda expressions?",
+    "correct_answers": ["Consumer, Predicate, Supplier"],
+    "incorrect_answers": ["Observer, Observable", "Collector, Builder", "Filter, Map, Reduce"]
+  }
+]
