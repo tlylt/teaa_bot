@@ -3,18 +3,21 @@
     "type": "MCQ",
     "question": "A class implementing an interface results in an is-a relationship, just like in class inheritance.",
     "correct_answers": ["True"],
-    "incorrect_answers": ["False"]
+    "incorrect_answers": ["False"],
+    "explanation": "Interfaces achieve similar results to class inheritance"
   },
   {
     "type": "MCQ",
     "question": "Java exceptions are divided into checked exceptions, unchecked exceptions, and runtime exceptions.",
-    "correct_answers": ["True"],
-    "incorrect_answers": ["False"]
+    "correct_answers": ["False"],
+    "incorrect_answers": ["True"],
+    "explanation": "Errors and runtime exceptions are collectively known as unchecked exceptions."
   },
   {
     "type": "MCQ",
     "question": "Which functional interfaces does Java provide to serve as data types for lambda expressions?",
     "correct_answers": ["Consumer, Predicate, Supplier"],
-    "incorrect_answers": ["Observer, Observable", "Collector, Builder", "Filter, Map, Reduce"]
+    "incorrect_answers": ["Observer, Observable", "Collector, Builder", "Filter, Map, Reduce"],
+    "explanation": "Lambda expressions can be used to create functional interfaces. Filter Map and Reduce take in lambdas and are not lambda expressions."
   }
 ]
