@@ -1,0 +1,27 @@
+[
+  {
+    "type": "MCQ",
+    "question": "Overridden methods are resolved using dynamic binding, and therefore resolve to the implementation in the actual type of the object.",
+    "correct_answers": ["True"],
+    "incorrect_answers": ["False"]
+  },
+  {
+    "type": "MCQ",
+    "question": "What is the output of this code?",
+    "correct_answers": ["It will not compile because of line 3"],
+    "code": "public static void main (String[] args) {\r\n  int array[] = {1, 2, 3, 4};\r\n  for (int i = 0; i < array.size(); i++) {\r\n    System.out.print(array[i]);\r\n  }\r\n}",
+    "incorrect_answers": [
+      "It will not compile because of line 4",
+      "123",
+      "1234"
+    ],
+    "explanation": "cannot find symbol|    symbol:   method size()"
+  },
+  {
+    "type": "MCQ",
+    "question": "What is the output of the main class? (Given that they are 3 separate classes)",
+    "code": "package mypackage;\r\npublic class Math {\r\n  public static int abs(int num) {\r\n    return num < 0 ? -num : num;\r\n  }\r\n}\r\n\r\npackage mypackage.elementary;\r\npublic class Math {\r\n  public static int abs(int num) {\r\n    return -num;\r\n  }\r\n}\r\n\r\nimport mypackage.Math;\r\nimport mypackage.elementary.*;\r\n\r\nclass Main {\r\n  public static void main(String args[]) {\r\n    System.out.println(Math.abs(123));\r\n  }\r\n}",
+    "correct_answers": ["123"],
+    "incorrect_answers": ["-123", "Will not compile", "Throws an exception"]
+  }
+]
